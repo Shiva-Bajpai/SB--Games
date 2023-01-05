@@ -1184,3 +1184,6 @@ Daily progress notes.
 ### Jan 04, 2023 17:49
 - Updated dependencies
 
+### Jan 05, 2023 19:17
+- Added error handling
+
