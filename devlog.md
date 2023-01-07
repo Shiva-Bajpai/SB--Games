@@ -8,3 +8,6 @@ Daily progress notes.
 ### Jan 06, 2023 13:08
 - Updated documentation
 
+### Jan 07, 2023 08:48
+- Updated color scheme
+
