@@ -17,3 +17,6 @@ Daily progress notes.
 ### Jan 07, 2023 16:49
 - Improved user experience
 
+### Jan 08, 2023 12:43
+- Updated color scheme
+
