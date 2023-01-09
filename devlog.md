@@ -23,3 +23,6 @@ Daily progress notes.
 ### Jan 08, 2023 15:10
 - Updated dependencies
 
+### Jan 09, 2023 20:59
+- Worked on component styling
+
