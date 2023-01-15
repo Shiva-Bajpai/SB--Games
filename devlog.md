@@ -50,3 +50,6 @@ Daily progress notes.
 ### Jan 14, 2023 20:00
 - Fixed mobile layout
 
+### Jan 15, 2023 08:07
+- Optimized performance
+
