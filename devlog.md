@@ -1217,3 +1217,6 @@ Daily progress notes.
 ### Jan 21, 2023 18:35
 - Added accessibility features
 
+### Jan 21, 2023 20:53
+- Cleaned up unused code
+
