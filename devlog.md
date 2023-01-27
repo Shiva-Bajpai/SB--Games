@@ -1238,3 +1238,6 @@ Daily progress notes.
 ### Jan 27, 2023 13:09
 - Fixed edge case bugs
 
+### Jan 27, 2023 17:01
+- Added error handling
+
