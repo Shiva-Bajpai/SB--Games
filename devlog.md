@@ -86,3 +86,6 @@ Daily progress notes.
 ### Jan 31, 2023 16:46
 - Improved navigation
 
+### Jan 31, 2023 18:27
+- Fixed mobile layout
+
