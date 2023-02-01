@@ -92,3 +92,6 @@ Daily progress notes.
 ### Jan 31, 2023 22:48
 - Fixed layout issues
 
+### Feb 01, 2023 23:42
+- Fixed mobile layout
+
