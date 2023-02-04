@@ -101,3 +101,6 @@ Daily progress notes.
 ### Feb 04, 2023 11:07
 - Optimized performance
 
+### Feb 04, 2023 14:02
+- Improved animations
+
