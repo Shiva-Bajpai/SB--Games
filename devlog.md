@@ -110,3 +110,6 @@ Daily progress notes.
 ### Feb 05, 2023 21:29
 - Improved animations
 
+### Feb 06, 2023 12:09
+- Refactored state management
+
