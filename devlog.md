@@ -122,3 +122,6 @@ Daily progress notes.
 ### Feb 08, 2023 22:35
 - Updated color scheme
 
+### Feb 08, 2023 23:36
+- Improved navigation
+
