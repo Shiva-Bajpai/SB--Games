@@ -125,3 +125,6 @@ Daily progress notes.
 ### Feb 08, 2023 23:36
 - Improved navigation
 
+### Feb 10, 2023 17:16
+- Fixed layout issues
+
