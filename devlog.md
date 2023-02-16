@@ -137,3 +137,6 @@ Daily progress notes.
 ### Feb 14, 2023 22:12
 - Updated dependencies
 
+### Feb 16, 2023 12:38
+- Added accessibility features
+
