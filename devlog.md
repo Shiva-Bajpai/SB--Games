@@ -173,3 +173,6 @@ Daily progress notes.
 ### Mar 09, 2023 21:36
 - Updated color scheme
 
+### Mar 11, 2023 13:31
+- Fixed mobile layout
+
