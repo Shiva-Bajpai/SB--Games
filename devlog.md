@@ -1343,3 +1343,6 @@ Daily progress notes.
 ### Mar 15, 2023 22:39
 - Updated color scheme
 
+### Mar 17, 2023 10:04
+- Improved responsiveness
+
