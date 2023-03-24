@@ -218,3 +218,6 @@ Daily progress notes.
 ### Mar 23, 2023 20:14
 - Added loading states
 
+### Mar 24, 2023 08:22
+- Improved responsiveness
+
