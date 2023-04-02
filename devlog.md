@@ -1385,3 +1385,6 @@ Daily progress notes.
 ### Apr 01, 2023 12:26
 - Worked on component styling
 
+### Apr 02, 2023 10:46
+- Fixed form validation
+
