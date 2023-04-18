@@ -266,3 +266,6 @@ Daily progress notes.
 ### Apr 18, 2023 08:58
 - Updated dependencies
 
+### Apr 18, 2023 13:39
+- Fixed mobile layout
+
