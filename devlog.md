@@ -1445,3 +1445,6 @@ Daily progress notes.
 ### May 01, 2023 19:42
 - Improved navigation
 
+### May 02, 2023 16:15
+- Improved animations
+
