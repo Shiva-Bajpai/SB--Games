@@ -380,3 +380,6 @@ Daily progress notes.
 ### May 27, 2023 18:01
 - Improved user experience
 
+### May 29, 2023 13:44
+- Added error handling
+
