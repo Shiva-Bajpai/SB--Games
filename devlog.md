@@ -1499,3 +1499,6 @@ Daily progress notes.
 ### Jun 06, 2023 11:31
 - Cleaned up unused code
 
+### Jun 06, 2023 12:05
+- Added loading states
+
