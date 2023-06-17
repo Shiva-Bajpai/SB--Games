@@ -443,3 +443,6 @@ Daily progress notes.
 ### Jun 16, 2023 18:06
 - Improved animations
 
+### Jun 17, 2023 18:31
+- Updated documentation
+
