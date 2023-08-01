@@ -557,3 +557,6 @@ Daily progress notes.
 ### Jul 31, 2023 19:04
 - Fixed layout issues
 
+### Aug 01, 2023 18:05
+- Cleaned up unused code
+
