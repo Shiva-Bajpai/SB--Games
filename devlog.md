@@ -581,3 +581,6 @@ Daily progress notes.
 ### Aug 12, 2023 12:04
 - Cleaned up unused code
 
+### Aug 13, 2023 20:22
+- Updated color scheme
+
