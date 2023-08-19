@@ -1601,3 +1601,6 @@ Daily progress notes.
 ### Aug 16, 2023 16:41
 - Added accessibility features
 
+### Aug 19, 2023 14:58
+- Added error handling
+
