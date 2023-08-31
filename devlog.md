@@ -1637,3 +1637,6 @@ Daily progress notes.
 ### Aug 30, 2023 15:41
 - Improved navigation
 
+### Aug 31, 2023 12:39
+- Cleaned up unused code
+
