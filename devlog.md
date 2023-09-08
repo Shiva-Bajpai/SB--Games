@@ -1652,3 +1652,6 @@ Daily progress notes.
 ### Sep 07, 2023 22:51
 - Worked on component styling
 
+### Sep 08, 2023 20:05
+- Added accessibility features
+
