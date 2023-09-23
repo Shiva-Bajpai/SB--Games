@@ -671,3 +671,6 @@ Daily progress notes.
 ### Sep 22, 2023 18:43
 - Fixed layout issues
 
+### Sep 23, 2023 17:06
+- Added accessibility features
+
