@@ -1703,3 +1703,6 @@ Daily progress notes.
 ### Oct 03, 2023 17:03
 - Improved navigation
 
+### Oct 04, 2023 12:45
+- Fixed mobile layout
+
