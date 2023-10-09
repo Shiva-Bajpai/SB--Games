@@ -707,3 +707,6 @@ Daily progress notes.
 ### Oct 08, 2023 12:40
 - Added error handling
 
+### Oct 09, 2023 17:44
+- Added loading states
+
