@@ -791,3 +791,6 @@ Daily progress notes.
 ### Nov 03, 2023 22:53
 - Refactored state management
 
+### Nov 06, 2023 10:26
+- Fixed mobile layout
+
