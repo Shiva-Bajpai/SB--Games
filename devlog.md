@@ -803,3 +803,6 @@ Daily progress notes.
 ### Nov 07, 2023 13:28
 - Updated documentation
 
+### Nov 11, 2023 21:17
+- Improved animations
+
