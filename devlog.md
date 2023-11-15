@@ -1793,3 +1793,6 @@ Daily progress notes.
 ### Nov 13, 2023 21:44
 - Added loading states
 
+### Nov 15, 2023 12:43
+- Fixed mobile layout
+
