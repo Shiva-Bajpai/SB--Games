@@ -1802,3 +1802,6 @@ Daily progress notes.
 ### Nov 18, 2023 21:55
 - Fixed form validation
 
+### Nov 19, 2023 17:52
+- Cleaned up unused code
+
