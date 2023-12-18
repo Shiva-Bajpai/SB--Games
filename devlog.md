@@ -920,3 +920,6 @@ Daily progress notes.
 ### Dec 18, 2023 10:32
 - Cleaned up unused code
 
+### Dec 18, 2023 17:55
+- Refactored state management
+
