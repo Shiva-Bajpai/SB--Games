@@ -935,3 +935,6 @@ Daily progress notes.
 ### Dec 19, 2023 14:51
 - Worked on component styling
 
+### Dec 19, 2023 21:28
+- Improved navigation
+
