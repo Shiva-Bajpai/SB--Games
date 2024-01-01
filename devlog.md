@@ -971,3 +971,6 @@ Daily progress notes.
 ### Jan 01, 2024 09:45
 - Added error handling
 
+### Jan 01, 2024 19:05
+- Updated documentation
+
