@@ -974,3 +974,6 @@ Daily progress notes.
 ### Jan 01, 2024 19:05
 - Updated documentation
 
+### Jan 02, 2024 19:13
+- Fixed mobile layout
+
