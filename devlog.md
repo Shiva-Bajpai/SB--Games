@@ -980,3 +980,6 @@ Daily progress notes.
 ### Jan 03, 2024 08:24
 - Fixed layout issues
 
+### Jan 03, 2024 09:36
+- Cleaned up unused code
+
