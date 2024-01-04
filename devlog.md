@@ -1919,3 +1919,6 @@ Daily progress notes.
 ### Jan 03, 2024 16:29
 - Improved user experience
 
+### Jan 04, 2024 19:49
+- Cleaned up unused code
+
