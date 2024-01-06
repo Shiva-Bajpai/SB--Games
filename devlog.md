@@ -1004,3 +1004,6 @@ Daily progress notes.
 ### Jan 05, 2024 21:22
 - Fixed form validation
 
+### Jan 06, 2024 16:08
+- Worked on component styling
+
