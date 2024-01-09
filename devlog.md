@@ -1007,3 +1007,6 @@ Daily progress notes.
 ### Jan 06, 2024 16:08
 - Worked on component styling
 
+### Jan 09, 2024 13:04
+- Improved navigation
+
