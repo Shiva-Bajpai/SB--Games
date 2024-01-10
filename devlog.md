@@ -1013,3 +1013,6 @@ Daily progress notes.
 ### Jan 09, 2024 21:19
 - Fixed form validation
 
+### Jan 10, 2024 12:42
+- Added accessibility features
+
