@@ -1946,3 +1946,6 @@ Daily progress notes.
 ### Jan 16, 2024 17:47
 - Updated dependencies
 
+### Jan 17, 2024 18:53
+- Fixed mobile layout
+
