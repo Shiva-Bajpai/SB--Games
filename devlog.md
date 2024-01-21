@@ -1055,3 +1055,6 @@ Daily progress notes.
 ### Jan 19, 2024 10:40
 - Fixed mobile layout
 
+### Jan 21, 2024 22:37
+- Cleaned up unused code
+
