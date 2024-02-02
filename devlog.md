@@ -1082,3 +1082,6 @@ Daily progress notes.
 ### Feb 02, 2024 12:40
 - Updated dependencies
 
+### Feb 02, 2024 15:51
+- Added loading states
+
