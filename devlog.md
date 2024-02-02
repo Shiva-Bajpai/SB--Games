@@ -1961,3 +1961,6 @@ Daily progress notes.
 ### Jan 26, 2024 16:32
 - Fixed edge case bugs
 
+### Feb 02, 2024 16:26
+- Fixed mobile layout
+
