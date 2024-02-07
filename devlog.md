@@ -1097,3 +1097,6 @@ Daily progress notes.
 ### Feb 06, 2024 09:16
 - Fixed edge case bugs
 
+### Feb 07, 2024 08:31
+- Refactored state management
+
