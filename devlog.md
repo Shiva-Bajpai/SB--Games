@@ -1985,3 +1985,6 @@ Daily progress notes.
 ### Feb 06, 2024 19:09
 - Refactored state management
 
+### Feb 08, 2024 10:46
+- Fixed layout issues
+
