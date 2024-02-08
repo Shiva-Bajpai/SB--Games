@@ -1988,3 +1988,6 @@ Daily progress notes.
 ### Feb 08, 2024 10:46
 - Fixed layout issues
 
+### Feb 08, 2024 17:47
+- Fixed mobile layout
+
