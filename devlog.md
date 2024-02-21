@@ -2018,3 +2018,6 @@ Daily progress notes.
 ### Feb 20, 2024 11:07
 - Refactored state management
 
+### Feb 21, 2024 14:38
+- Fixed mobile layout
+
