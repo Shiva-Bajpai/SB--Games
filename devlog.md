@@ -2021,3 +2021,6 @@ Daily progress notes.
 ### Feb 21, 2024 14:38
 - Fixed mobile layout
 
+### Feb 22, 2024 22:34
+- Added loading states
+
