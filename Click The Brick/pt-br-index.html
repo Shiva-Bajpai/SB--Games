@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Clicking On The Brick</title>
+		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+		<style type="text/css">
+			* {
+				font-family: sans-serif;
+				max-width: 10000px;
+			}
+			h1 {
+				text-align: center;
+			}
+			#shop-head {
+				font-size: 20px;
+				background-color: #d4d4d4;
+				border: solid 2px gray;
+				border-radius: 30px;
+				width: 100%;
+				padding: 4px;
+				/*height: 100%;*/
+			}
+			.item-type-switch {
+				background-color: #d4d4d4;
+				border: solid 2px gray;
+				border-radius: 30px;
+				padding: 4px;
+			}
+			.item-type-switch:hover {
+				background-color: #aaa9a9;
+			}
+			#products-container {
+				text-align: left;
+				width: 100%;
+				border-radius: 20px;
+				border: 3px #003953 solid;
+				background-color: #00aeff;	
+			}
+			#brick-container {
+				text-align: center;
+			}
+			#brick-to-click {
+				text-align: center;
+			}
+			.product {
+				border-radius: 20px;
+				margin: 14px;
+				border: 2.5px solid black;
+				background-color: white;
+			}
+			#mario_block_easter_egg_button {
+				width: 32px;
+				height: 32px;
+			}
+			#item_type_switch_container {
+				text-align: center;
+			}
+
+			#bricks_per_second {
+				text-align: center;
+				font-size: 13px;
+			}
+			#buttons button {	
+				background-color: #d4d4d4;
+				border: solid 2px gray;
+				border-radius: 30px;
+				padding: 8px;
+				padding-left: 32px;
+				padding-right: 32px;
+			}
+			#buttons button:hover {
+				background-color: #aaa9a9;
+			}
+			#buttons {
+				position: fixed;
+			}
+			#statistics_and_options {
+				align-self: flex-end;
+				background-color: lightgrey;
+				border: grey 2px solid;
+				border-radius: 20px;
+				width: 400px;
+				padding: 16px;
+			}
+			.bold {
+				font-weight: bold;
+			}
+			.hidden {
+				display: none;
+			}
+		</style>
+		<style id="cursor"></style>
+		<script type="text/javascript">
+			var game = {
+				frame: 0,
+				fps: 30,
+				bricks: 0,
+				bricks_per_click: 1,
+				cursor: "none",
+				bricks_per_second: 0
+			}
+			var next_frame = setInterval(function() {
+				game.frame += 1;
+				if(game.frame >= game.fps) {
+					game.frame = 0;
+					game.bricks += game.bricks_per_second;
+				}
+				document.getElementById("bricks").innerHTML = game.bricks;
+				document.getElementById("bricks_per_second").innerHTML = "<img src='img/brick.png' alt='Bricks' width='26' height='18'> Por segundo: "+game.bricks_per_second;
+			},1000/game.fps);
+			document.addEventListener("click", function(command) {
+				if (command.target.id == "normal_cursor") {
+					alert("Você não pode comprar este cursor porque este cursor é seu cursor inicial.");
+				}
+			});
+			document.getElementById("cursor").innerHTML = "*{cursor: url(img/cursors/"+cursor+".png) 0 0, auto;}";
+			function brick_click() {
+				game.bricks += game.bricks_per_click;
+			}
+			function brick_hover() {
+				document.getElementById("brick-to-click-img").setAttribute("src","img/brick-hover.png");
+			}
+			function brick_not_hover() {
+				document.getElementById("brick-to-click-img").setAttribute("src","img/brick.png");
+			}
+			function buy(itemtype,item,power,price) {
+				const itemtypes = {
+					cursor: function() {
+						if (game.bricks >= price) {
+							let buycursorconfirm = confirm("Tem certeza que deseja comprar este cursor? Você vai perder seu cursor anterior.");
+							if (buycursorconfirm == true) {
+								game.bricks -= price;
+								cursor = item;
+								document.getElementById("cursor").innerHTML = "*{cursor: url(img/cursors/"+cursor+".png) 0 0, auto;}";
+								game.bricks_per_click = power;
+							}
+						}else{
+							alert("Você não tem tijolos o suficiente para comprar este item.");
+						}						
+					},
+					building: function() {
+						if (game.bricks >= price) {
+							game.bricks -= price;
+							game.bricks_per_second += power;
+							document.getElementById("buildings_container").innerHTML += "<img src='img/buildings/"+item+".png' alt='"+item+"' width='32' height='32'>";
+						}else{
+							alert("Você não tem tijolos o suficiente para comprar este item.");
+						}						
+					}
+				}
+				itemtypes[itemtype]();
+			}
+			function mario_block_easter_egg() {
+				document.getElementById("mario_block_easter_egg_button").innerHTML = "<img src='img/easter-eggs/mario-block.gif' width='16' height='16'>";
+				document.getElementById("mario_block_easter_egg_button").setAttribute("onclick","mario_block_easter_egg2();");
+			}
+			function mario_block_easter_egg2() {
+				document.getElementById("mario_block_easter_egg_button").innerHTML = "<img src='img/easter-eggs/mario-mushroom.png' width='16' height='16'>";
+			}
+			function item_type_switch(itemtype) {
+				if (itemtype == "buildings") {
+					document.getElementById("cursors_shop").setAttribute("class","hidden");
+					document.getElementById("buildings_shop").removeAttribute("class");
+				}
+				if (itemtype == "cursors") {
+					document.getElementById("buildings_shop").setAttribute("class","hidden");
+					document.getElementById("cursors_shop").removeAttribute("class");					
+				}
+			}
+			function show_statistics_and_options() {
+				if (document.getElementById("statistics_and_options").getAttribute("style") == "display: none;") {
+					document.getElementById("statistics_and_options").removeAttribute("style");
+				}else{
+					document.getElementById("statistics_and_options").setAttribute("style","display: none;");
+				}
+			}
+		</script>
+	</head>
+
+	<body id="body">
+		<h1>Clicking on the brick</h1>
+		<div id="brick-container"><label id="bricks">0</label><img src="img/brick.png" alt=" Bricks" height="18" width="26"></div>
+		<div id="buttons">
+				<button onclick="show_statistics_and_options();">Estatísticas & Opções</button>
+				<div id="statistics_and_options" style="display: none;">
+					<div id="bricks_per_second"><img src="img/brick.png" alt="Bricks" width="26" height="18"></div>
+					<hr>
+					<div>
+						<span class="bold">Selecione o idioma:</span><br>
+						<a href="index.html"><button>English</button></a><button>Português (Brasil)</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="brick-to-click"><img id="brick-to-click-img" src="img/brick.png" width="240" onclick="brick_click();" onmouseover="brick_hover();" onmouseout="brick_not_hover();" alt="Brick"></div>
+		<div id="buildings_container"></div>
+		<div id="shop">
+			<button id="shop-head"><span onclick="mario_block_easter_egg();" id="mario_block_easter_egg_button">L</span>oja</button>
+			<div id="item_type_switch_container"><button class="item-type-switch" onclick="item_type_switch('cursors');">Cursores</button><button class="item-type-switch" onclick="item_type_switch('buildings');">Construções</button><!-- <button class="item-type-switch">Upgrades</button> --></div>
+			<div id="products-container">
+			<div id="cursors_shop">
+				<button class="product" id="normal_cursor">
+					<img src="img/cursors/normal_cursor.png">
+					Cursor inicial
+					<p></p>
+					Preço: 0<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 1<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','iron_mouse',5,25)">
+					<img src="img/cursors/iron_mouse.png">
+					Mouse de ferro
+					<p></p>
+					Preço: 25<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 5<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','golden_mouse',25,250)">
+					<img src="img/cursors/golden_mouse.png">
+					Mouse dourado
+					<p></p>
+					Preço: 250<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 25<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','diamond_mouse',50,2500)">
+					<img src="img/cursors/diamond_mouse.png">
+					Mouse de diamante
+					<p></p>
+					Preço: 2500<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 50<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','fire_mouse',100,5500)">
+					<img src="img/cursors/fire_mouse.png">
+					Mouse de fogo
+					<p></p>
+					Preço: 5500<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 100<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','hammer',225,8800)">
+					<img src="img/cursors/hammer.png">
+					Martelo
+					<p></p>
+					Preço: 8800<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 225<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','iron_hammer',500,47600)">
+					<img src="img/cursors/iron_hammer.png">
+					Martelo de ferro
+					<p></p>
+					Preço: 47600<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 500<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','golden_hammer',1000,100000)">
+					<img src="img/cursors/golden_hammer.png">
+					Martelo dourado
+					<p></p>
+					Preço: 100000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 1000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','ruby_hammer',5000,170000)">
+					<img src="img/cursors/ruby_hammer.png">
+					Martelo de rubi
+					<p></p>
+					Preço: 170000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 5000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','diamond_hammer',10000,765000)">
+					<img src="img/cursors/diamond_hammer.png">
+					Martelo de diamante
+					<p></p>
+					Preço: 765000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 10000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','fire_hammer',100000,1500000)">
+					<img src="img/cursors/fire_hammer.png">
+					Martelo de fogo
+					<p></p>
+					Preço: 1500000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 100000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','pistol',500000,3000000)">
+					<img src="img/cursors/pistol.png">
+					Pistola
+					<p></p>
+					Preço: 3000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 500000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','iron_pistol',2000000,6000000)">
+					<img src="img/cursors/iron_pistol.png">
+					Pistola de ferro
+					<p></p>
+					Preço: 6000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 2000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','golden_pistol',6000000,24000000)">
+					<img src="img/cursors/golden_pistol.png">
+					Pistola dourada
+					<p></p>
+					Preço: 24000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 6000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','emerald_pistol',18000000,96000000)">
+					<img src="img/cursors/emerald_pistol.png">
+					Pistola de esmeralda
+					<p></p>
+					Preço: 96000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 18000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','diamond_pistol',72000000,198000000)">
+					<img src="img/cursors/diamond_pistol.png">
+					Pistola de diamante
+					<p></p>
+					Preço: 198000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 72000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','tnt',432000000,792000000)">
+					<img src="img/cursors/tnt.png">
+					TNT
+					<p></p>
+					Preço: 792000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 432000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','iron_tnt',1728000000,4752000000)">
+					<img src="img/cursors/iron_tnt.png">
+					TNT De ferro
+					<p></p>
+					Preço: 4752000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 1728000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','copper_tnt',6912000000,57024000000)">
+					<img src="img/cursors/copper_tnt.png">
+					TNT De cobre
+					<p></p>
+					Preço: 57024000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 6912000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','golden_tnt',20736000000,912384000000)">
+					<img src="img/cursors/golden_tnt.png">
+					TNT Dourada
+					<p></p>
+					Preço: 912384000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 20736000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','diamond_tnt',124416000000,20072448000000)">
+					<img src="img/cursors/diamond_tnt.png">
+					TNT De diamante
+					<p></p>
+					Preço: 20072448000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 124416000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('cursor','mini_gun',3483648000000,562028544000000)">
+					<img src="img/cursors/mini_gun.png">
+					Mini Gun
+					<p></p>
+					Preço: 562028544000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por clique: 3483648000000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+			</div>
+			<div id="buildings_shop" class="hidden">
+				<button class="product" onclick="buy('building','brick_wall',1,100)">
+					<img src="img/buildings/brick_wall.png">
+					Parede de tijolos
+					<p></p>
+					Preço: 100<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por segundo: 1<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('building','house',4,250)">
+					<img src="img/buildings/house.png">
+					Casa
+					<p></p>
+					Preço: 250<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por segundo: 4<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('building','building',24,1100)">
+					<img src="img/buildings/building.png">
+					Prédio
+					<p></p>
+					Preço: 1100<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por segundo: 24<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('building','condominium',96,3200)">
+					<img src="img/buildings/condominium.png">
+					Condomínio
+					<p></p>
+					Preço: 3200<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por segundo: 96<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('building','brick_factory',2048,50000)">
+					<img src="img/buildings/brick_factory.png">
+					Fábrica de tijolos
+					<p></p>
+					Preço: 50000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por segundo: 2048<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('building','company',8912,100000)">
+					<img src="img/buildings/company.png">
+					Empresa
+					<p></p>
+					Preço: 100000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por segundo: 8912<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('building','rocket',53472,450000)">
+					<img src="img/buildings/rocket.png">
+					Rocket
+					<p></p>
+					Preço: 450000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por segundo: 53472<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('building','marble_rocket',641664,2700000)">
+					<img src="img/buildings/marble_rocket.png">
+					Foguete de mármore
+					<p></p>
+					Preço: 2700000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por segundo: 641664<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+				<button class="product" onclick="buy('building','golden_rocket',8983296,18900000)">
+					<img src="img/buildings/golden_rocket.png">
+					Foguete dourado
+					<p></p>
+					Preço: 18900000<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+					<p></p>
+					Tijolos por segundo: 8983296<img src="img/brick.png" alt=" Bricks" width="26" height="18">
+				</button>
+			</div>
+		</div>
+	</body>
+</html>
