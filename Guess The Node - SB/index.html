@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 40px;
+        }
+        body{
+            text-align: center;
+            font-family: monospace;
+            color: white;
+            background-color: rgb(39, 40, 40);
+        }
+        button{
+            background-color: rgb(167, 27, 167);
+            padding:8px 12px;
+            font-size: 25px;
+            font-weight: 600;
+            color: white;
+            border-radius: 10px;
+        }
+        .btn{
+            display:inline-block;
+            height: 160px;
+            width:160px;
+            border:10px outset lightslategray;
+            margin-bottom:15px;
+            color:black;
+            margin: 0;
+
+        }
+        #b1{
+             background-color:#ff5100af;
+             border-top-left-radius: 100%;
+        }
+        #b2{
+            background-color: #ffe600c4;
+            border-top-right-radius: 100%;
+
+        }
+        #b3{
+            background-color: rgba(0, 128, 64, 0.733);
+            border-bottom-left-radius: 100%;
+
+        }
+        #b4{
+            background-color: #0066ffa2;
+            border-bottom-right-radius: 100%;
+
+        }
+        #mssg{
+            color:white;
+            font-size: 20px;
+        }
+        
+        #score{
+            font-size: 25px;
+        }
+        @media screen and (max-width:660px){
+            .btn{
+                width:130px;
+                height:130px;
+            }
+            h1{
+                font-size: 25px;
+            }
+            h2{
+                font-size: 15px;
+            }
+        }
+        @media screen and (max-width:350px)
+        {
+            .btn{
+                width:80px;
+                height:80px;
+                border-width:5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Test your hearing memory</h1>
+    <button onclick="startGame()">Start</button>
+    <div id="score">Score : 0</div>
+    <h2 id="mssg"></h2>
+    <div>
+        <div class="btn" id="b1"></div>
+        <div class="btn" id="b2"></div>
+    </div>
+    <div>
+        <div class="btn" id="b3"></div>
+        <div class="btn" id="b4"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
