@@ -17,54 +17,63 @@ This series is all about experimentation and learning in game development. With 
    - **Features**:
      - Responsive design
      - Score tracker for competitive play
+     - [Play Now](https://sb-bubble-game.netlify.app)
 
 2. **Build The Blocks**
    - **Description**: Stack blocks as high as possible without toppling them. A game focused on precision and timing.
    - **Features**:
      - Dynamic physics
      - Increasing difficulty with higher stacks
+     - [Play Now](https://sb-build-the-blocks.netlify.app)
 
 3. **Click The Brick**
    - **Description**: Click on moving bricks to score points before they disappear. A game that challenges your speed and accuracy.
    - **Features**:
      - Quick-paced gameplay
      - Scoring and timer system
+     - [Play Now](https://sb-click-the-brick.netlify.app)
 
 4. **Crushing Cubes SB**
    - **Description**: Match and crush cubes to clear the board in a limited number of moves. A strategic game that rewards planning and quick thinking.
    - **Features**:
      - Unique cube-matching mechanics
      - Limited moves to challenge players
+     - [Play Now](https://sb-crushing-cubes.netlify.app)
 
 5. **Feel Music With Piano**
    - **Description**: Tap the keys to play the piano in time with the music. A rhythmic game for music enthusiasts.
    - **Features**:
      - Piano keyboard and musical notes
      - Real-time sound effects
+     - [Play Now](https://sb-piano.netlify.app)
 
 6. **Guess The Node - SB**
    - **Description**: Guess the correct node based on clues. A fun and educational game for improving memory and logic.
    - **Features**:
      - Clue-based gameplay
      - Multiple difficulty levels
+     - [Play Now](https://sb-guess-the-node.netlify.app)
 
 7. **Hangman By SB**
    - **Description**: A classic hangman game where you guess letters to reveal the hidden word. Simple yet challenging.
    - **Features**:
      - Word bank with multiple categories
      - Visual hangman display
+     - [Play Now](https://sb-the-hangman.netlify.app)
 
 8. **Ninja Hero - SB**
    - **Description**: Control a ninja hero as they navigate obstacles and defeat enemies. A game of skill and agility.
    - **Features**:
      - Interactive controls
      - Levels with increasing difficulty
+     - [Play Now](https://sb-ninjha-hero.netlify.app)
 
 9. **Ship Wars - SB**
    - **Description**: Engage in a space battle and destroy enemy ships before they destroy you. A game that tests your reflexes and strategy.
    - **Features**:
      - Space-themed visuals and sound effects
      - Multiple levels and enemy types
+     - [Play Now](https://sb-ship-wars.netlify.app)
 
 ## 🚀 Getting Started
 
@@ -115,12 +124,3 @@ Find me online:
 - [LinkedIn](https://Bit.ly/Know-Shiva)
 
 Enjoy the games and happy playing! 🎉
-1. [Bubble Game](https://sb-bubble-game.netlify.app)
-2. [Build The Blocks](https://sb-build-the-blocks.netlify.app)
-3. [Click The Brick](https://sb-click-the-brick.netlify.app)
-4. [Crushing Cubes SB](https://sb-crushing-cubes.netlify.app)
-5. [Feel Music With Piano](https://sb-piano.netlify.app)
-6. [Guess The Node](https://sb-guess-the-node.netlify.app)
-7. [SB Hangman By SB](https://sb-the-hangman.netlify.app)
-8. [Ninja Hero - SB](https://sb-ninjha-hero.netlify.app)
-9. [Ship-wars-SB](https://sb-ship-wars.netlify.app)
