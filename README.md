@@ -71,8 +71,8 @@ This series is all about experimentation and learning in game development. With 
 9. **Ship Wars - SB**
    - **Description**: Engage in a space battle and destroy enemy ships before they destroy you. A game that tests your reflexes and strategy.
    - **Features**:
+     - use your UP Arrow to Shoot the ships.
      - Space-themed visuals and sound effects
-     - Multiple levels and enemy types
      - [Play Now](https://sb-ship-wars.netlify.app)
 
 ## 🚀 Getting Started
@@ -108,10 +108,6 @@ Each game folder includes:
 ## 💡 Learning and Inspiration
 
 This series is inspired by a mix of classic games and new concepts, aiming to explore what’s possible with game development while learning new techniques.
-
-## 📝 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## 🤝 Contributing
 
